@@ -6,6 +6,13 @@
 - 데모 보기: https://leeyou34.github.io/kyoseupso-demo/
 - '원장님용 설명'을 켠 채로 보기: https://leeyou34.github.io/kyoseupso-demo/#owner — 실제 제작 때 원장님 자료(사진·이력·교습비 등)로 바뀌는 자리를 점선으로 보여 줍니다.
 
+<p>
+<img src="docs/screenshots/m1_hero.jpg" width="230" alt="모바일 첫 화면">
+<img src="docs/screenshots/m8_space.jpg" width="230" alt="모바일 교실 사진">
+<img src="docs/screenshots/m7_owner.jpg" width="230" alt="원장님용 설명을 켠 모바일 화면">
+</p>
+<img src="docs/screenshots/d1_hero.jpg" width="720" alt="데스크톱 첫 화면">
+
 ## 담은 것
 - 모바일 우선 한 장 구성: 첫 화면(지역·학년·과목) → 가르치는 방식 → 원장 소개 → 학년별 수업 → 수업 한 주와 월간 리포트 → 교실 → 교습비·모집 현황 → 상담부터 첫 수업까지 → 자주 묻는 질문 → 오시는 길 → 상담 신청
 - 연락: 카카오톡 상담 · 전화 · 길찾기(모바일 화면 아래 고정)
@@ -14,7 +21,7 @@
 - 지어낸 후기 없음 — 네이버 플레이스 방문자 리뷰로 연결
 - 검색 노출 막음(noindex) — 시연용이므로
 
-## 점검 (2026-11-09)
+## 점검 (2026-11-10)
 - 접근성 자동 점검: axe-core 4.10.2, WCAG 2.0·2.1·2.2 A/AA 규칙 — 위반 0건(모바일 390px · 데스크톱 1440px)
 - 레이아웃 흔들림(CLS) 0 · 가로 넘침 없음(390 · 820 · 1440px)
 - 외부 스크립트 0개(글꼴 CSS와 사진만 외부에서 불러옴)
