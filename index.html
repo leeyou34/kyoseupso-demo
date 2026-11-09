@@ -299,6 +299,7 @@ dialog.sheet::backdrop{background:rgba(15,20,28,.45)}
 .tag{display:none}
 body.owner .tag{display:inline-flex;position:absolute;z-index:5;top:10px;right:10px;background:var(--accent);color:#fff;font-size:.78rem;font-weight:800;border-radius:999px;padding:.25rem .65rem;box-shadow:var(--shadow)}
 body.owner [data-owner]{position:relative;outline:2px dashed var(--accent);outline-offset:6px;border-radius:12px}
+body.owner [data-owner]>.tag+.table{margin-top:2.8rem}
 .owner-off{display:none;position:fixed;left:12px;bottom:calc(76px + env(safe-area-inset-bottom));z-index:55;background:var(--accent);color:#fff;border:0;border-radius:999px;min-height:40px;padding:0 .9rem;font:inherit;font-size:.86rem;font-weight:800;box-shadow:var(--shadow);cursor:pointer}
 body.owner .owner-off{display:inline-flex;align-items:center}
 @media (min-width:900px){.owner-off{left:auto;right:24px;bottom:24px}}
