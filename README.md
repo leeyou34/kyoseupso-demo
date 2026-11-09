@@ -3,13 +3,13 @@
 더엔에스홀딩스(주) AX 솔루션 사업본부가 1~5인 교습소·학원용 홈페이지 상품(H-003)을 원장님께 보여 드리려고 만든 데모입니다.
 '정원영어교습소'는 가상 업체입니다. 상호·인물·주소·전화·교습비·신고번호는 실제가 아닙니다.
 
-| 모바일 첫 화면 | 수업 | 교습비·법정 표시 | 카카오톡 상담 |
+| 모바일 첫 화면 | 수업 | 교습비·법정 표시 | 원장님용 설명 켠 화면 |
 |---|---|---|---|
-| ![](docs/screenshots/m1_hero.jpg) | ![](docs/screenshots/m3_programs.jpg) | ![](docs/screenshots/m4_fees.jpg) | ![](docs/screenshots/m5_kakao.jpg) |
+| ![](docs/screenshots/m1_hero.jpg) | ![](docs/screenshots/m3_programs.jpg) | ![](docs/screenshots/m5_legal.jpg) | ![](docs/screenshots/m7_owner.jpg) |
 
 ![데스크톱 첫 화면](docs/screenshots/d1_hero.jpg)
 
-스크린숏은 2026-11-09 22:54~22:59 실제 사진·글꼴을 불러온 브라우저 화면입니다. 그 뒤 고친 두 군데(교습비 표 '수업' 칸 줄바꿈, 오시는 길 제목 문구)는 화면에 아직 반영되지 않았습니다.
+스크린숏은 실제 사진·글꼴을 불러온 브라우저 화면입니다(2026-11-09 22:56~23:07, 모바일 390×844 · 데스크톱 1440×900).
 
 ## v1 → v2에서 바뀐 것
 

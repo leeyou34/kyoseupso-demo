@@ -105,11 +105,12 @@ body.owner .owner-panel{display:block}
 .hero .wrap{display:grid;gap:clamp(20px,4vw,56px);align-items:center}
 .hero-figure{order:-1}
 @media (min-width:960px){.hero .wrap{grid-template-columns:1.05fr .95fr}.hero-figure{order:0}}
-.hero-meta{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1.1rem;padding:0;list-style:none}
+.hero-meta{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.3rem 0 0;padding:0;list-style:none}
+.hero h1 .kicker{display:block;font-size:clamp(1rem,1.7vw,1.2rem);font-weight:700;letter-spacing:-0.01em;color:var(--ink-2);margin-bottom:.7rem}
 .hero-meta li{font-size:.86rem;font-weight:700;color:var(--ink-2);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:.35rem .8rem}
 .hero h1 em{font-style:normal;color:var(--accent)}
 .hero .lead{margin-top:1.1rem;max-width:34rem}
-.hero-cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.8rem}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem}
 .hero-note{margin-top:1rem;font-size:.9rem;color:var(--ink-3)}
 .hero-figure{position:relative;margin:0}
 .hero-figure img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--r-l);box-shadow:var(--shadow);background:var(--paper-2)}
@@ -345,11 +346,11 @@ body.owner .owner-off{display:inline-flex;align-items:center}
 <section class="hero" aria-labelledby="hero-title">
   <div class="wrap">
     <div>
-      <ul class="hero-meta" aria-label="교습소 요약">
-        <li>초등 3학년 ~ 중학교 3학년</li><li>한 반 최대 6명</li><li>모든 수업 원장 직강</li>
-      </ul>
-      <h1 id="hero-title">우리 아이가 <em>어디서 막히는지</em>,<br>원장이 직접 보고 가르칩니다</h1>
+      <h1 id="hero-title"><span class="kicker">가온동 초3~중3 영어교습소</span>우리 아이가 <em>어디서 막히는지</em>,<br>원장이 직접 보고 가르칩니다</h1>
       <p class="lead">처음 40분 진단으로 읽기·어휘·문법 중 어디가 약한지 찾고, 매주 확인하고, 매달 학부모님께 리포트로 알려 드립니다. 가온초 정문에서 걸어서 4분.</p>
+      <ul class="hero-meta" aria-label="교습소 요약">
+        <li>한 반 최대 6명</li><li>모든 수업 원장 직강</li><li>무료 레벨 진단 40분</li>
+      </ul>
       <div class="hero-cta">
         <a class="btn btn-kakao" href="#kakao" data-kakao data-track="kakao_hero"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3.5c-5 0-9 3.1-9 7 0 2.5 1.7 4.7 4.2 5.9l-.9 3.4c-.1.3.3.6.6.4l4-2.6c.4 0 .7.1 1.1.1 5 0 9-3.1 9-7s-4-7.2-9-7.2Z"/></svg>카카오톡으로 상담하기</a>
         <a class="btn btn-line" href="tel:0200000000" data-track="call_hero">전화 상담 02-0000-0000</a>
@@ -511,6 +512,7 @@ body.owner .owner-off{display:inline-flex;align-items:center}
         <li><span><b>초등 5~6</b> · 월·수 오후 5시</span><span class="st open">2자리</span></li>
         <li><span><b>중학교</b> · 월·수·금 오후 7시</span><span class="st wait">대기 접수</span></li>
       </ul>
+      <p class="hint" style="margin-top:.6rem;font-size:.86rem;color:var(--ink-3)">모집 현황은 매달 1일에 고칩니다.</p>
     </div>
     <div data-owner>
       <span class="tag">⑤ 신고한 교습비·신고번호</span>
@@ -670,6 +672,7 @@ body.owner .owner-off{display:inline-flex;align-items:center}
       <div class="consent">
         <b>개인정보 수집·이용 안내</b>
         <ul>
+          <li>수집하는 곳: 정원영어교습소 (원장 한서진)</li>
           <li>목적: 상담 연락과 레벨 진단 일정 안내</li>
           <li>항목: 보호자 연락처, 학년, 연락 방법·시간</li>
           <li>보유 기간: 상담이 끝난 뒤 3개월 안에 파기</li>
