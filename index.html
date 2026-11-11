@@ -173,8 +173,25 @@ body.owner .owner-panel{display:block}
 .bar .track{height:10px;background:var(--navy-soft);border-radius:99px;overflow:hidden}
 .bar .fill{display:block;height:100%;background:var(--ink);border-radius:99px}
 .bar .fill.a{background:var(--accent)}
-.report .memo{background:var(--paper);border-radius:var(--r-s);padding:.9rem 1rem;font-size:.93rem;color:var(--ink-2)}
-.report .memo b{color:var(--ink)}
+.report .memo{display:grid;grid-template-columns:auto 1fr;gap:.4rem .9rem;margin:0;background:var(--paper);border-radius:var(--r-s);padding:.9rem 1rem;font-size:.93rem;color:var(--ink-2)}
+.report .memo dt{font-weight:700;color:var(--ink);white-space:nowrap}
+.report .memo dd{margin:0}
+
+/* 지키는 것 · 맞는 학생 */
+.values-list{list-style:none;margin:0;padding:0;display:grid;gap:clamp(14px,2vw,20px);counter-reset:v}
+@media (min-width:860px){.values-list{grid-template-columns:repeat(3,1fr)}}
+.values-list li{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:clamp(20px,3vw,26px);counter-increment:v}
+.values-list li::before{content:counter(v);display:grid;place-items:center;width:2rem;height:2rem;border-radius:50%;background:var(--accent-soft);color:var(--accent-strong);font-weight:800;margin-bottom:.7rem}
+.values-list b{display:block;font-size:1.08rem;margin-bottom:.4rem}
+.values-list span{display:block;color:var(--ink-2);font-size:.95rem}
+.values-list .cost{margin-top:.7rem;font-size:.88rem;font-weight:700;color:var(--accent-strong)}
+.fit-grid{display:grid;gap:clamp(14px,2vw,20px);margin-top:clamp(20px,3vw,28px)}
+@media (min-width:860px){.fit-grid{grid-template-columns:1fr 1fr}}
+.fit-box{border-radius:var(--r);padding:clamp(20px,3vw,26px)}
+.fit-box.yes{background:#E3F1EA}
+.fit-box.no{background:var(--paper-2);border:1px solid var(--line)}
+.fit-box h3{font-size:1.05rem;margin-bottom:.6rem}
+.fit-box ul{margin:0;padding-left:1.1rem;display:grid;gap:.35rem;color:var(--ink-2);font-size:.95rem}
 
 /* 공간 */
 .space-grid{display:grid;gap:clamp(12px,2vw,18px)}
@@ -326,6 +343,7 @@ body.owner .owner-off{display:inline-flex;align-items:center}
       <li>반별 요일·시간과 이번 달 모집 현황</li>
       <li>카카오톡 채널 주소, 전화번호, 네이버 플레이스 주소</li>
       <li>자주 받는 질문 5개와 답</li>
+      <li>손해를 보더라도 지키는 원칙 세 가지, 맞는 학생과 맞지 않는 경우 (첫 상담 때 다섯 가지를 여쭙고 정합니다)</li>
     </ol>
     <p>아래 점선으로 표시된 곳이 원장님 자료로 바뀝니다.</p>
   </div>
@@ -348,7 +366,7 @@ body.owner .owner-off{display:inline-flex;align-items:center}
   <div class="wrap">
     <div>
       <h1 id="hero-title"><span class="kicker">가온동 초3~중3 영어교습소</span>우리 아이가 <em>어디서 막히는지</em>,<br>원장이 직접 보고 가르칩니다</h1>
-      <p class="lead">처음 40분 진단으로 읽기·어휘·문법 중 어디가 약한지 찾고, 매주 확인하고, 매달 학부모님께 리포트로 알려 드립니다. 가온초 정문에서 걸어서 4분.</p>
+      <p class="lead">처음 40분 진단에서 읽기·어휘·문법 가운데 약한 곳을 찾습니다. 그다음부터는 매주 확인하고 한 달에 한 번 리포트로 알려 드립니다. 가온초 정문에서 걸어서 4분.</p>
       <ul class="hero-meta" aria-label="교습소 요약">
         <li>한 반 최대 6명</li><li>모든 수업 원장 직강</li><li>무료 레벨 진단 40분</li>
       </ul>
@@ -373,23 +391,23 @@ body.owner .owner-off{display:inline-flex;align-items:center}
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow">이렇게 가르칩니다</p>
-      <h2 id="proof-title">진단하고, 매주 확인하고, 매달 알려 드립니다</h2>
+      <h2 id="proof-title">진단부터 월간 리포트까지 원장이 직접 합니다</h2>
     </div>
     <div class="steps">
       <article class="step">
-        <p class="k">STEP 1 · 진단</p>
+        <p class="k">처음 · 진단</p>
         <h3>40분 레벨 진단으로 시작</h3>
-        <p>읽기·어휘·문법 세 영역을 따로 봅니다. 점수 하나가 아니라 어디서 막히는지를 찾습니다.</p>
-        <ul><li>진단 결과지를 상담 때 함께 봅니다</li><li>결과에 맞는 반을 제안하고, 맞는 반이 없으면 솔직하게 말씀드립니다</li></ul>
+        <p>읽기·어휘·문법 세 영역을 따로 봅니다. 점수 하나로 끝내지 않고 어디서 막히는지 찾습니다.</p>
+        <ul><li>진단 결과지를 상담 때 함께 봅니다</li><li>결과에 맞는 반을 제안합니다. 맞는 반이 없으면 그렇다고 말씀드립니다</li></ul>
       </article>
       <article class="step">
-        <p class="k">STEP 2 · 매주 확인</p>
+        <p class="k">매주 · 확인</p>
         <h3>숙제는 원장이 한 장씩 봅니다</h3>
         <p>수업 시작 10분은 단어 확인, 끝 10분은 그날 읽은 글을 소리 내어 읽습니다.</p>
         <ul><li>단어 테스트 기록을 매주 남깁니다</li><li>두 번 연속 못 따라오면 보충 시간을 잡습니다</li></ul>
       </article>
       <article class="step">
-        <p class="k">STEP 3 · 매달 리포트</p>
+        <p class="k">매달 · 리포트</p>
         <h3>한 달에 한 번, 리포트와 10분 통화</h3>
         <p>무엇을 배웠고 무엇이 아직인지, 다음 달에 무엇을 할지 적어 카카오톡으로 보내 드립니다.</p>
         <ul><li>학교 시험 4주 전에는 범위표를 먼저 보내 드립니다</li><li>원하시면 상담 시간을 따로 잡습니다</li></ul>
@@ -412,7 +430,7 @@ body.owner .owner-off{display:inline-flex;align-items:center}
       <p class="eyebrow">원장 소개</p>
       <h2 id="teacher-title">한서진 원장</h2>
       <p class="quote">“아이 이름과 약한 곳을 다 기억할 수 있는 만큼만 받습니다.”</p>
-      <p class="lead">한 반 6명을 넘기지 않는 이유입니다. 진단, 수업, 숙제 확인, 학부모 상담까지 원장이 직접 합니다.</p>
+      <p class="lead">그래서 한 반은 6명까지만 받습니다. 진단과 수업, 숙제 확인, 학부모 상담을 모두 원장이 직접 합니다.</p>
       <div data-owner>
         <span class="tag">③ 원장님 이력</span>
         <ul class="cv">
@@ -420,6 +438,34 @@ body.owner .owner-off{display:inline-flex;align-items:center}
           <li><span class="t">경력</span><span>초·중등 영어 지도 11년 (학원 강사 7년, 교습소 운영 4년)</span></li>
           <li><span class="t">수업</span><span>초등 원서 읽기 · 중등 내신 문법과 서술형</span></li>
         </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="values" id="values" aria-labelledby="values-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">교습소가 지키는 것</p>
+      <h2 id="values-title">손해를 보더라도 지키는 원칙 세 가지</h2>
+      <p>아이가 영어 글을 혼자 읽고 자기 생각을 영어로 쓰게 하는 것. 정원영어교습소를 연 이유입니다. 아래 세 가지는 그 일을 하려고 지킵니다.</p>
+    </div>
+    <div data-owner>
+      <span class="tag">⑧ 원장님 원칙 · 맞는 학생</span>
+      <ol class="values-list">
+        <li><b>기억할 수 있는 만큼만 받습니다</b><span>아이 이름과 약한 곳을 모두 기억하려고 한 반은 6명까지만 받습니다.</span><span class="cost">대기 학생이 생겨도 반을 늘리지 않습니다</span></li>
+        <li><b>맞지 않으면 등록을 권하지 않습니다</b><span>진단해 보고 우리 수업이 맞지 않으면 그렇다고 말씀드립니다. 어떤 곳이 맞을지도 함께 고민합니다.</span><span class="cost">상담 한 건을 놓치더라도 지킵니다</span></li>
+        <li><b>있는 그대로 알려 드립니다</b><span>매달 리포트에 잘한 것과 아직 안 되는 것을 같이 적습니다.</span><span class="cost">듣기 불편한 내용이라도 빼지 않습니다</span></li>
+      </ol>
+      <div class="fit-grid">
+        <div class="fit-box yes">
+          <h3>이런 아이에게 맞습니다</h3>
+          <ul><li>단어는 아는데 문장을 읽다가 자주 멈추는 아이</li><li>객관식은 맞는데 서술형에서 점수가 깎이는 아이</li><li>매주 숙제를 해 올 마음이 있는 아이</li></ul>
+        </div>
+        <div class="fit-box no">
+          <h3>이런 경우엔 다른 곳이 나을 수 있습니다</h3>
+          <ul><li>선행 진도를 빠르게 나가고 싶을 때</li><li>원어민 회화가 중심인 수업을 원할 때</li><li>숙제 확인 없이 수업만 원할 때</li></ul>
+        </div>
       </div>
     </div>
   </div>
@@ -480,7 +526,11 @@ body.owner .owner-off{display:inline-flex;align-items:center}
         <div class="bar"><span>문법</span><span class="track"><span class="fill a" style="width:58%"></span></span><span class="num">58%</span></div>
         <div class="bar"><span>서술형</span><span class="track"><span class="fill a" style="width:61%"></span></span><span class="num">61%</span></div>
       </div>
-      <p class="memo"><b>원장 메모</b> · 관계대명사 문장을 쓸 때 주어를 한 번 더 쓰는 실수가 반복됩니다. 12월 첫 2주는 이 부분을 매 수업 3문항씩 따로 연습합니다.</p>
+      <dl class="memo">
+        <dt>이번 달 목표</dt><dd>관계대명사로 두 문장을 한 문장으로 잇기</dd>
+        <dt>지금</dt><dd>관계대명사 문장을 쓸 때 주어를 한 번 더 쓰는 실수가 반복됩니다</dd>
+        <dt>다음 달</dt><dd>12월 첫 2주는 이 부분을 매 수업 3문항씩 따로 연습합니다</dd>
+      </dl>
     </div>
   </div>
 </section>
@@ -490,12 +540,12 @@ body.owner .owner-off{display:inline-flex;align-items:center}
     <div class="sec-head">
       <p class="eyebrow">공부하는 곳</p>
       <h2 id="space-title">조용히 읽고 쓰는 교실</h2>
-      <p>햇빛 드는 2층 교실과 원서 책장. 수업 전후로 남아서 읽고 가도 됩니다.</p>
+      <p>밝은 2층 교실과 원서 책장이 있습니다. 수업 전후로 남아서 읽고 가도 됩니다.</p>
     </div>
     <div class="space-grid" data-owner>
       <span class="tag">④ 교실·책장 사진</span>
-      <figure><img src="https://images.unsplash.com/photo-1635424239131-32dc44986b56?w=1100&q=70&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1635424239131-32dc44986b56?w=640&q=70&auto=format&fit=crop 640w, https://images.unsplash.com/photo-1635424239131-32dc44986b56?w=1100&q=70&auto=format&fit=crop 1100w" sizes="(min-width: 860px) 56vw, 100vw" width="1100" height="825" loading="lazy" alt="햇빛이 드는 나무 책상 교실"><figcaption>수업 교실</figcaption></figure>
-      <figure><img src="https://images.unsplash.com/photo-1517673132405-a56a62b18caf?w=800&q=70&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1517673132405-a56a62b18caf?w=480&q=70&auto=format&fit=crop 480w, https://images.unsplash.com/photo-1517673132405-a56a62b18caf?w=800&q=70&auto=format&fit=crop 800w" sizes="(min-width: 860px) 40vw, 100vw" width="800" height="600" loading="lazy" alt="책상 위에 쌓인 책과 공책, 펜"><figcaption>교재와 원서</figcaption></figure>
+      <figure><img src="https://images.unsplash.com/photo-1647342003191-70d033b24485?w=1100&h=825&q=70&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1647342003191-70d033b24485?w=640&h=480&q=70&auto=format&fit=crop 640w, https://images.unsplash.com/photo-1647342003191-70d033b24485?w=1100&h=825&q=70&auto=format&fit=crop 1100w" sizes="(min-width: 860px) 56vw, 100vw" width="1100" height="825" loading="lazy" alt="흰 책상과 분홍 의자가 놓인 밝은 교실"><figcaption>수업 교실</figcaption></figure>
+      <figure><img src="https://images.unsplash.com/photo-1648905755287-b5c721ab36c9?w=800&h=600&q=70&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1648905755287-b5c721ab36c9?w=480&h=360&q=70&auto=format&fit=crop 480w, https://images.unsplash.com/photo-1648905755287-b5c721ab36c9?w=800&h=600&q=70&auto=format&fit=crop 800w" sizes="(min-width: 860px) 40vw, 100vw" width="800" height="600" loading="lazy" alt="영어 원서가 꽂힌 나무 책장"><figcaption>원서 책장</figcaption></figure>
     </div>
   </div>
 </section>
@@ -634,7 +684,7 @@ body.owner .owner-off{display:inline-flex;align-items:center}
     <div class="intro">
       <p class="eyebrow">상담 신청</p>
       <h2 id="consult-title">카카오톡이 편하지 않으시면, 연락처만 남겨 주세요</h2>
-      <p class="lead" style="margin-top:1rem">원장이 직접 연락드립니다. 아이 이름은 받지 않습니다 — 학년과 연락처만으로 충분합니다.</p>
+      <p class="lead" style="margin-top:1rem">원장이 직접 연락드립니다. 아이 이름은 받지 않고 학년과 연락처만 받습니다.</p>
     </div>
     <div class="news-box" data-owner>
       <span class="tag">⑦ 소식 (월 1~2회 갱신)</span>
@@ -701,7 +751,7 @@ body.owner .owner-off{display:inline-flex;align-items:center}
       </div>
       <div>
         <p><a href="#privacy" data-demo="개인정보 처리방침 전문 페이지로 연결됩니다">개인정보 처리방침</a></p>
-        <p style="margin-top:.4rem">사진: Unsplash (Timur Shakerzianov, Unseen Studio, 2y.kang, Debby Hudson)</p>
+        <p style="margin-top:.4rem">사진: Unsplash (Timur Shakerzianov, Unseen Studio, SAE SOL, Thomas Bormans)</p>
       </div>
     </div>
     <p class="demo">이 사이트는 홈페이지 제작 시연용 데모입니다. 상호·인물·주소·교습비·신고번호는 실제가 아닙니다. 데모 제작: 더엔에스홀딩스(주) AX 솔루션 사업본부</p>
